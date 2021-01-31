@@ -129,7 +129,6 @@
 	<h1 id=title>原神抽卡记录导出工具 by@sunfkny</h1>
 	<!-- <h1 id="loader">抽卡报告加载中</h1> -->
 	<div id="report">
-		<a id="url" style="display: none;">{{url}}</a>
 		<div id="loader" class="loader">
 			<div class="loader-inner">
 				<div class="loader-line-wrap">
@@ -151,7 +150,7 @@
 		</div>
 	</div>
 	<script>
-		url = document.querySelector("#url").innerText;
+		var url = {{ url|tojson }};
 		console.log(url);
 		fetch("./ggeapi?url=" + encodeURIComponent(url))
 			.then(function (response) {
