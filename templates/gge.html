@@ -151,7 +151,8 @@
 		</div>
 	</div>
 	<script>
-		url = document.querySelector("#url").innerText
+		url = document.querySelector("#url").innerText;
+		console.log(url);
 		fetch("./ggeapi?url=" + encodeURIComponent(url))
 			.then(function (response) {
 				return response.text();

@@ -13,7 +13,7 @@ def hello():
 
 @app.route("/gge")
 def test():
-    url = str(request.values.get("url"))
+    url = str(request.args.get("url"))
     return render_template("gge.html", url=url)
 
 
